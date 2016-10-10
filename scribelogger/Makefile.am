@@ -6,7 +6,7 @@ cc_sources = logger.cc scribe.cc scribe_constants.cc scribe_types.cc
 library_includedir=$(includedir)/$(GENERIC_LIBRARY_NAME)-$(GENERIC_API_VERSION)/$(GENERIC_LIBRARY_NAME)
 library_include_HEADERS = $(h_sources)
 
-INCLUDES = -I$(top_srcdir)
+INCLUDES = -I/usr/include/thrift -I$(top_srcdir)
 
 AM_CPPFLAGS = $(GLIB_CFLAGS) $(THRIFT_CFLAGS) -I/usr/include/thrift/fb303 -Wall -Werror -O3
 lib_LTLIBRARIES = libscribelogger-1.la
